@@ -1,0 +1,15 @@
+{
+  "name": "echojoy",
+  "owner": {
+    "name": "Din Studio"
+  },
+  "description": "EchoJoy agent skills marketplace.",
+  "plugins": [
+    {
+      "name": "echojoy-skills",
+      "source": "./",
+      "description": "EchoJoy's portable agent skills for Claude Code, Codex, and other agents.",
+      "category": "productivity"
+    }
+  ]
+}

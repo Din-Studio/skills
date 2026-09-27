@@ -1,0 +1,24 @@
+{
+  "name": "echojoy-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "EchoJoy's portable agent skills for Claude Code, Codex, and other agents.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Din-Studio/skills.git"
+  },
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "scripts": {
+    "sync": "node scripts/sync-lingying.mjs && node scripts/manifests.mjs sync",
+    "validate": "node scripts/sync-lingying.mjs --check && node scripts/manifests.mjs check",
+    "test": "node --test",
+    "test:install": "node scripts/smoke-install.mjs",
+    "check": "npm run validate && npm test",
+    "version": "npm run sync"
+  },
+  "devDependencies": {
+    "yaml": "^2.8.1"
+  }
+}
