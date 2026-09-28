@@ -1,6 +1,6 @@
 {
   "name": "echojoy-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "EchoJoy's portable agent skills for Claude Code, Codex, and other agents.",
   "author": {
     "name": "Din Studio"
@@ -14,6 +14,7 @@
   ],
   "skills": [
     "./skills/lingying/ly-image",
-    "./skills/lingying/ly-video"
+    "./skills/lingying/ly-video",
+    "./skills/video/performance"
   ]
 }

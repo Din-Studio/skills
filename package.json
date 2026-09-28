@@ -1,6 +1,6 @@
 {
   "name": "echojoy-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "EchoJoy's portable agent skills for Claude Code, Codex, and other agents.",
   "repository": {
@@ -13,7 +13,7 @@
   "scripts": {
     "sync": "node scripts/sync-lingying.mjs && node scripts/manifests.mjs sync",
     "validate": "node scripts/sync-lingying.mjs --check && node scripts/manifests.mjs check",
-    "test": "node --test",
+    "test": "node --test tests/*.test.mjs",
     "test:install": "node scripts/smoke-install.mjs",
     "check": "npm run validate && npm test",
     "version": "npm run sync"

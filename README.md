@@ -117,6 +117,23 @@ npx skills@latest remove ly-image -g -y
 | --- | --- | --- |
 | [ly-image](skills/lingying/ly-image/SKILL.md) | lingying | 通过灵影 Gateway 生图、图生图和图片编辑，下载结果并恢复异步任务 |
 | [ly-video](skills/lingying/ly-video/SKILL.md) | lingying | 通过灵影 Gateway 文生视频、图生视频和视频编辑，支持参考素材上传与任务恢复 |
+| [performance](skills/video/performance/SKILL.md) | video | 根据剧情、小说、剧本或动作描述编写人物表演视频提示词，或优化已有提示词；只输出文字 |
+
+### 人物表演视频提示词
+
+`performance` 把情绪描述改写成由事件触发的可见表演：视线目标、面部动作的起落、身体支撑的转移、人与道具的接触以及物体前后状态。技能有两种模式：
+
+- `create`：从剧情、小说片段、剧本或动作描述写出中文提示词。素材超过 15 秒的容量时，按事件拆成多段，前后段的站位和道具状态保持连续。
+- `edit`：整体优化已有提示词。剧情顺序、对白原文、人名、`@[图N]` 等素材引用、时长画幅和否定约束保持不变，同时附上修改说明。
+
+不写模式时，技能根据输入判断。
+
+```text
+$performance create：她听见门铃，从椅子上站起，拿起桌上的信走向门。写成视频提示词。
+$performance edit：她的反应太假了，优化一下这段提示词：……
+```
+
+Claude Code 插件中使用 `/echojoy-skills:performance`。`performance` 只输出提示词，不提交生成任务；需要生成视频时，把提示词交给 `ly-video` 或其他生成工具。人工试用用例见 [人物表演评测用例](tests/performance-evals.json)，理论依据见 [docs/performance/](docs/performance/)。
 
 ### 灵影生图与生视频
 
@@ -151,11 +168,14 @@ skills/
   lingying/
     ly-image/               生图技能及独立脚本
     ly-video/               生视频技能及独立脚本
+  video/
+    performance/            人物表演视频提示词技能及理论参考
 scripts/manifests.mjs        发现、验证技能并同步清单
 scripts/lingying/runtime.mjs 灵影脚本的维护源
 scripts/sync-lingying.mjs    将运行时同步到两个独立技能
-tests/                      清单行为测试
+tests/                      技能链接测试与评测用例
 docs/distribution.md        调研依据与分发设计
+docs/performance/           人物表演理论调研
 .github/workflows/validate.yml
 ```
 
