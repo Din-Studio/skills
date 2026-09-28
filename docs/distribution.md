@@ -21,7 +21,7 @@
 
 检查了本地 `mattpocock_skills`，对应提交 `3cca18b368ae95cdbdebbff572ccafa662551015`，其包版本为 `1.2.3`。它将正式技能放在 engineering、productivity 等分类中，并用插件清单逐一注册，通过脚本同步 package 与插件版本。
 
-本仓库沿用上述组织方式，并把技能路径同步也自动化。不复制参考仓库的业务技能、品牌、许可证或已有 marketplace 身份。当前发布 `ly-image` 和 `ly-video`，原维护技能 `echojoy-skill-author` 已移除。
+本仓库沿用上述组织方式，并把技能路径同步也自动化。不复制参考仓库的业务技能、品牌、许可证或已有 marketplace 身份。当前发布 `ly-image`、`ly-video` 和 `performance`，原维护技能 `echojoy-skill-author` 已移除。
 
 参考仓库 README 说明它已进入官方 marketplace，因此可以直接按插件名安装。新仓库没有这一前提，必须先添加 `Din-Studio/skills` marketplace，再安装 `echojoy-skills@echojoy`。该流程由 [Claude Code marketplace 文档](https://code.claude.com/docs/en/plugin-marketplaces) 明确支持。
 

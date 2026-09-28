@@ -36,7 +36,7 @@ npm run test:install
 
 `sync` 根据 `skills/` 和 `package.json` 更新插件路径、名称、描述及版本。`check` 只检查，不修改文件。不要手动维护 `plugin.json` 的 `skills` 数组。
 
-灵影技能的公共运行时维护在 `scripts/lingying/runtime.mjs`；`npm run sync` 会生成两份技能内的 `scripts/runtime.mjs`，`npm run check` 检查副本一致性。不要直接修改生成副本。每个技能的入口、指令和参考文档仍放在各自目录内；安装后的执行不依赖维护脚本或相邻技能。修改运行时后运行 `tests/lingying.test.mjs` 中的本地 HTTP 协议测试，不需要生产凭据或付费任务。
+灵影技能的公共运行时维护在 `scripts/lingying/runtime.mjs`；`npm run sync` 会生成两份技能内的 `scripts/runtime.mjs`，`npm run check` 检查副本一致性。不要直接修改生成副本。每个技能的入口、指令和参考文档仍放在各自目录内；安装后的执行不依赖维护脚本或相邻技能。`npm test` 检查每个已发布技能的 Markdown 相对链接都能在该技能目录内解析。
 
 `test:install` 在系统临时目录安装、列出并卸载技能，核对每个技能目录的全部文件。已安装 Claude Code 时，可运行 `npm run test:install -- --claude`，同时验证 marketplace 安装和技能清单。脚本使用临时 `CLAUDE_CONFIG_DIR`，不会把测试插件注册到日常用户配置。
 
