@@ -17,7 +17,7 @@ The core rule: **write the external event, then the visible reaction on each cha
 
 Always read [output format](references/prompt-format.md) before writing. Read the theory files the material needs:
 
-- Close-ups, dialogue, listening, expression changes → [face](references/face.md)
+- Any emotion word, facial reaction, close-up, dialogue, or listening → [face](references/face.md): look up the plot beat and the emotion at the intended intensity (微弱 / 中等 / 明显), then write the listed visible changes in event order
 - Sitting/standing, walking, turning, gestures → [body](references/body.md)
 - Props, doors, furniture, handovers, shared objects, obstacles → [environment](references/environment.md)
 
@@ -53,6 +53,6 @@ Always read [output format](references/prompt-format.md) before writing. Read th
 ## Resources
 
 - [references/prompt-format.md](references/prompt-format.md): create and edit output contracts with worked examples; read every time.
-- [references/face.md](references/face.md): facial action lifecycle, parallel tracks, speech and listener rules, facial distortion checklist.
+- [references/face.md](references/face.md): facial region vocabulary, intensity ladder, emotion × intensity and plot-beat lookup tables, blends and masking, action lifecycle, speech and listener rules, facial distortion checklist.
 - [references/body.md](references/body.md): action units, support transfer, turning, gestures with speech, body distortion checklist.
 - [references/environment.md](references/environment.md): object cards, contact and support graph, state ledger, interaction scenarios, interaction distortion checklist.
